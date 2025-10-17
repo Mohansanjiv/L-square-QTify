@@ -1,0 +1,28 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  background-color: #34c94b;
+}
+
+/* Left: Logo */
+.left {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Center: Search Bar */
+.center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+/* Right: Feedback Button */
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
