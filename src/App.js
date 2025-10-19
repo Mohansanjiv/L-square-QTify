@@ -6,7 +6,7 @@ import HeroSection from "./components/Hero/HeroSection";
 import Section from "./components/Section/Section";
 import SongsSection from "./components/SongsSection/SongsSection";
 
-// ✅ API endpoints centralized for maintainability
+
 const API_ENDPOINTS = {
   TOP_ALBUMS: "https://qtify-backend.labs.crio.do/albums/top",
   NEW_ALBUMS: "https://qtify-backend.labs.crio.do/albums/new",
@@ -20,7 +20,6 @@ function App() {
       <Navbar />
       <HeroSection />
 
-      {/* ✅ Use CSS class instead of inline styles */}
       <main className="content-section">
         <Section title="Top Albums" apiEndpoint={API_ENDPOINTS.TOP_ALBUMS} />
         <Section title="New Albums" apiEndpoint={API_ENDPOINTS.NEW_ALBUMS} />
