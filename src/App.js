@@ -1,33 +1,21 @@
 import React from "react";
 import "./App.css";
+import Navbar from "./components/pages/Navbar/Navbar";
+import Home from "./components/pages/Home/Home";
+import { Route, Routes } from "react-router";
+import AlbumDetails from "./components/pages/albumDetails/AlbumDetails";
 
-import Navbar from "./components/Navbar/Navbar";
-import HeroSection from "./components/Hero/HeroSection";
-import Section from "./components/Section/Section";
-import SongsSection from "./components/SongsSection/SongsSection";
 
 
-const API_ENDPOINTS = {
-  TOP_ALBUMS: "https://qtify-backend.labs.crio.do/albums/top",
-  NEW_ALBUMS: "https://qtify-backend.labs.crio.do/albums/new",
-  GENRES: "https://qtify-backend.labs.crio.do/genres",
-  SONGS: "https://qtify-backend.labs.crio.do/songs",
-};
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <HeroSection />
-
-      <main className="content-section">
-        <Section title="Top Albums" apiEndpoint={API_ENDPOINTS.TOP_ALBUMS} />
-        <Section title="New Albums" apiEndpoint={API_ENDPOINTS.NEW_ALBUMS} />
-        <SongsSection
-          GENRES_API={API_ENDPOINTS.GENRES}
-          SONGS_API={API_ENDPOINTS.SONGS}
-        />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/albums/:id" element={<AlbumDetails />} />
+      </Routes>
     </div>
   );
 }

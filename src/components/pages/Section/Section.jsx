@@ -1,6 +1,4 @@
 
-
-
 import React, { useEffect, useState } from "react";
 import Carousel from "../Qtify-carousel/Carousel";
 import Card from "../Card/Card";

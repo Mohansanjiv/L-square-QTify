@@ -1,8 +1,8 @@
 
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import Carousel from "../Qtify-carousel/Carousel";
 import Card from "../Card/Card";
-import axios from "axios";
 
 
 
@@ -52,7 +52,6 @@ const SongsSection = ({ GENRES_API, SONGS_API }) => {
                 ))}
             </div>
 
-            {/* Carousel */}
             <Carousel
                 data={filteredSongs}
                 renderItem={(song) => <Card key={song.id} album={song} />}
